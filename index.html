@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Heatmap with D3.js</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='ico/favicon.ico' rel='icon'>
+</head>
+
+<body>
+    <div id="main">
+        <div>
+            <h1>Weather HeatMap</h1>
+        </div>
+        
+        <div class="dropdown">
+            <label>City: </label>
+            <select id="city-dropdown">
+                <option value="CLT.csv">Charlotte</option>
+                <option value="CQT.csv">Los Angeles</option>
+                <option value="IND.csv">Indianapolis</option>
+                <option value="JAX.csv">Jacksonville</option>
+                <option value="KHOU.csv">Houston</option>
+                <option value="KNYC.csv">New York City</option>
+                <option value="KSEA.csv">Seattle</option>
+                <option value="MDW.csv">Chicago</option>
+                <option value="PHL.csv">Philadelphia</option>
+                <option value="PHX.csv">Phoenix</option>
+            </select>
+        </div>
+        <p></p>
+        <div>
+            <label for="categorySelect">Show: </label>
+            <select class="custom-select" id="categorySelect" onchange="onCategoryChanged()">
+                <option selected value="actual_mean_temp">Temperature</option>
+                <option value="actual_precipitation">Precipitation</option>
+            </select>
+        </div>
+        <div id="heatmap-container">
+            <!-- <svg width="700" height="700" style="border: 1px solid #777;">
+            </svg> -->
+            <svg id="svg" width="97%" height="1800"></svg>
+        </div>
+
+    </div>
+</body>
+<!-- <script src="heatmap.js"></script> -->
+<script src="//d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3-collection.v1.min.js"></script>
+<script src="./d3-tip.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-color/1.2.1/d3-color.js"></script>
+<script src="./main.js"></script>
+
+</html>
